@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "automoddownloader",
+  "version": "${version}",
+  "name": "Auto Mod Downloader",
+  "description": "Syncs Mods Between Server and Client",
+  "authors": [
+    "Jacobwasbeast"
+  ],
+  "contact": {
+    "website": "https://www.Jacobwasbeast.com"
+  },
+  "license": "MIT",
+  "icon": "assets/automoddownloader/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.jacobwasbeast.amd.MainClient"
+    ],
+    "main": [
+      "com.jacobwasbeast.amd.Main"
+    ],
+    "gfh:prePreLaunch": [
+      "com.jacobwasbeast.amd.mixins.client.MainInit"
+    ]
+  },
+  "mixins": [
+    "automoddownloader.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}
